@@ -2,738 +2,1252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080807" />
-  <meta name="description" content="SITHIK SILK CENTRE is a family-run retail textile store in Elavur, Tamil Nadu, offering clothing for men, women and children, sarees, dress materials and more for over 50 years." />
-  <title>SITHIK SILK CENTRE | A Legacy Woven Through Generations</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080807">
+<meta name="description" content="SITHIK SILK CENTRE is a family-run textile store in Elavur, Tamil Nadu. Three generations of quality and trust for over 50 years.">
+<title>SITHIK SILK CENTRE | A Legacy Woven Through Generations</title>
 
-  <style>
-    :root {
-      --black:#080807;
-      --black2:#11100e;
-      --ivory:#f5f0e7;
-      --muted:#b9b1a5;
-      --gold:#c8ad7d;
-      --gold2:#e2cfaa;
-      --line:rgba(226,207,170,.22);
-      --serif:'Playfair Display',Georgia,serif;
-      --sans:'DM Sans',system-ui,sans-serif;
-      --pad:clamp(22px,6.2vw,92px)
-    }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:var(--black);
-      color:var(--ivory);
-      font-family:var(--sans);
-      text-rendering:geometricPrecision;
-      -webkit-font-smoothing:antialiased
-    }
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
+<style>
+:root {
+  --black:#080807;
+  --black2:#11100e;
+  --ivory:#f5f0e7;
+  --muted:#b9b1a5;
+  --gold:#c8ad7d;
+  --gold2:#e2cfaa;
+  --line:rgba(226,207,170,.22);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --pad:clamp(22px,6.2vw,92px);
+}
 
-    .topbar{
-      position:absolute;
-      z-index:20;
-      inset:0 0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:28px var(--pad)
-    }
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  background:var(--black);
+  color:var(--ivory);
+  font-family:var(--sans);
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+}
+a {color:inherit;text-decoration:none}
+button {font:inherit}
 
-    .brand{display:flex;align-items:center;gap:12px;letter-spacing:.19em}
-    .brand-mark{width:34px;height:42px;position:relative;display:block}
-    .brand-mark:before,.brand-mark:after{
-      content:"";
-      position:absolute;
-      background:linear-gradient(145deg,#f1dfba,#a98755);
-      clip-path:polygon(48% 0,100% 0,100% 42%,62% 42%,62% 100%,0 100%,0 58%,48% 58%)
-    }
-    .brand-mark:before{inset:0}
-    .brand-mark:after{
-      width:11px;height:12px;right:0;top:17px;
-      background:var(--black);clip-path:none
-    }
-    .brand-name{font-size:13px;font-weight:700;line-height:1.35}
-    .brand-name span{
-      display:block;color:var(--gold);font-size:9px;
-      font-weight:500;letter-spacing:.31em;margin-top:3px
-    }
+/* NAVIGATION */
 
-    .nav{
-      display:flex;align-items:center;
-      gap:clamp(20px,3vw,46px);
-      font-size:12px;letter-spacing:.08em;color:#d1c9bd
-    }
-    .nav a{transition:color .25s}
-    .nav a:hover{color:var(--gold2)}
-    .nav-cta,.button{
-      display:inline-flex;align-items:center;justify-content:center;
-      border-radius:999px;background:var(--ivory);color:#17130d;
-      padding:14px 24px;font-size:11px;font-weight:700;
-      letter-spacing:.12em;text-transform:uppercase;
-      transition:background .25s,transform .25s
-    }
-    .nav-cta:hover,.button:hover{
-      background:var(--gold2);transform:translateY(-2px)
-    }
-    .burger{
-      display:none;border:1px solid var(--line);
-      background:rgba(255,255,255,.07);color:white;
-      border-radius:50%;width:46px;height:46px;cursor:pointer
-    }
-    .burger span{
-      display:block;width:17px;height:1px;
-      background:#fff;margin:5px auto;transition:.25s
-    }
-    .mobile-menu{display:none}
+.topbar {
+  position:absolute;
+  z-index:20;
+  inset:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:28px var(--pad);
+}
 
-    /* HERO SECTION - OWNER PHOTO */
-    .hero{
-      position:relative;
-      min-height:850px;
-      height:min(100svh,1080px);
-      display:flex;
-      align-items:center;
-      overflow:hidden;
-      background:#090908
-    }
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  letter-spacing:.19em;
+}
 
-    .hero-bg{
-      position:absolute;
-      inset:0;
-      background-image:
-        linear-gradient(90deg,rgba(5,5,4,.96) 0%,rgba(5,5,4,.86) 35%,rgba(5,5,4,.32) 70%,rgba(5,5,4,.12) 100%),
-        linear-gradient(0deg,#080807 0%,transparent 28%,rgba(0,0,0,.25) 100%),
-        url('images/owner-photo.webp');
-      background-size:cover;
-      background-position:center 46%;
-      transform:scale(1.025);
-      animation:slowZoom 18s ease-in-out infinite alternate
-    }
+.brand-mark {
+  width:34px;
+  height:42px;
+  position:relative;
+  display:block;
+}
 
-    .hero:after{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background:linear-gradient(0deg,#080807 0%,transparent 22%),linear-gradient(90deg,transparent 70%,rgba(0,0,0,.2))
-    }
+.brand-mark:before,
+.brand-mark:after {
+  content:"";
+  position:absolute;
+  background:linear-gradient(145deg,#f1dfba,#a98755);
+  clip-path:polygon(48% 0,100% 0,100% 42%,62% 42%,62% 100%,0 100%,0 58%,48% 58%);
+}
 
-    .hero-content{
-      position:relative;
-      z-index:2;
-      padding:100px var(--pad) 90px;
-      max-width:900px;
-      margin-top:42px;
-      animation:rise .9s both
-    }
+.brand-mark:before {inset:0}
 
-    .eyebrow{
-      display:flex;align-items:center;gap:13px;
-      color:var(--gold2);font-size:10px;
-      letter-spacing:.28em;text-transform:uppercase;
-      margin:0 0 25px
-    }
-    .eyebrow:before{
-      content:"";width:34px;height:1px;background:var(--gold)
-    }
-    h1,h2,h3,p{margin-top:0}
-    .hero h1{
-      font-family:var(--serif);font-weight:400;
-      font-size:clamp(54px,7.3vw,108px);
-      line-height:1.02;letter-spacing:-.045em;
-      max-width:800px;margin:0 0 24px
-    }
-    .hero h1 em{font-weight:400;color:var(--gold2)}
-    .hero-copy{
-      max-width:530px;color:#c4bdb2;
-      font-size:15px;line-height:1.9;margin-bottom:34px
-    }
-    .hero-actions{
-      display:flex;align-items:center;gap:30px;flex-wrap:wrap
-    }
-    .text-link{
-      font-size:11px;letter-spacing:.13em;text-transform:uppercase;
-      border-bottom:1px solid rgba(226,207,170,.65);
-      padding:0 0 7px;color:#eee5d7
-    }
-    .heritage-note{
-      position:absolute;z-index:3;right:var(--pad);bottom:75px;
-      display:flex;align-items:center;gap:17px;color:#e5d8c2
-    }
-    .heritage-note strong{
-      font-family:var(--serif);font-size:36px;font-weight:400
-    }
-    .heritage-note span{
-      font-size:9px;letter-spacing:.2em;line-height:1.7;
-      text-transform:uppercase;color:#c8bdac
-    }
-    .scroll-mark{
-      position:absolute;z-index:3;left:var(--pad);bottom:45px;
-      color:#b8ad9c;font-size:9px;letter-spacing:.2em;
-      text-transform:uppercase;display:flex;align-items:center;gap:12px
-    }
-    .scroll-mark:before{
-      content:"";width:35px;height:1px;background:var(--gold)
-    }
+.brand-mark:after {
+  width:11px;
+  height:12px;
+  right:0;
+  top:17px;
+  background:var(--black);
+  clip-path:none;
+}
 
-    section{padding:112px var(--pad)}
-    .section-kicker{
-      color:var(--gold);font-size:10px;
-      letter-spacing:.25em;text-transform:uppercase;margin-bottom:18px
-    }
-    .section-title{
-      font-family:var(--serif);
-      font-size:clamp(38px,5vw,68px);
-      font-weight:400;line-height:1.1;
-      letter-spacing:-.035em;margin-bottom:18px
-    }
-    .section-title em{color:var(--gold2);font-weight:400}
-    .section-intro{
-      color:var(--muted);font-size:14px;
-      line-height:1.9;max-width:560px
-    }
+.brand-name {
+  font-size:13px;
+  font-weight:700;
+  line-height:1.35;
+}
 
-    /* COLLECTIONS */
-    .collections{background:#100f0d}
-    .section-head{
-      display:flex;align-items:end;justify-content:space-between;
-      gap:30px;margin-bottom:48px
-    }
-    .collection-grid{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:13px
-    }
-    .collection{
-      position:relative;min-height:360px;
-      overflow:hidden;background:#24211c
-    }
-    .collection img{
-      width:100%;height:100%;position:absolute;inset:0;
-      object-fit:cover;filter:brightness(.78);
-      transition:transform .7s,filter .5s
-    }
-    .collection:hover img{
-      transform:scale(1.06);filter:brightness(.92)
-    }
-    .collection:after{
-      content:"";position:absolute;inset:0;
-      background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)
-    }
-    .collection-label{
-      position:absolute;z-index:2;left:22px;right:22px;bottom:23px
-    }
-    .collection-label small{
-      display:block;color:var(--gold2);font-size:9px;
-      letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px
-    }
-    .collection-label h3{
-      font-family:var(--serif);font-weight:400;
-      font-size:27px;margin:0
-    }
-    .collection-label span{
-      display:block;color:#d0c7ba;font-size:10px;
-      margin-top:8px;letter-spacing:.08em
-    }
+.brand-name span {
+  display:block;
+  color:var(--gold);
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.31em;
+  margin-top:3px;
+}
 
-    /* LEGACY */
-    .legacy{
-      display:grid;grid-template-columns:1fr 1fr;
-      gap:9vw;align-items:center;background:#080807
-    }
-    .legacy-visual{position:relative;min-height:570px}
-    .legacy-visual img{
-      position:absolute;inset:0;width:85%;height:100%;
-      object-fit:cover;filter:brightness(.8)
-    }
-    .legacy-visual:after{
-      content:"";position:absolute;inset:0 15% 0 0;
-      border:1px solid rgba(226,207,170,.42);
-      transform:translate(18px,18px);pointer-events:none
-    }
-    .legacy-stamp{
-      position:absolute;right:0;bottom:42px;
-      background:var(--gold);color:#17130e;
-      width:150px;height:150px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;font-size:10px;letter-spacing:.13em;
-      line-height:1.7;text-transform:uppercase;padding:20px
-    }
-    .legacy-stamp strong{
-      display:block;font-family:var(--serif);
-      font-size:38px;letter-spacing:0;font-weight:400
-    }
-    .legacy-copy .section-title{max-width:600px}
-    .legacy-copy p{
-      color:var(--muted);font-size:14px;
-      line-height:2;max-width:520px
-    }
-    .legacy-points{
-      display:flex;gap:36px;margin-top:35px;
-      padding-top:28px;border-top:1px solid var(--line)
-    }
-    .legacy-points strong{
-      display:block;font-family:var(--serif);
-      font-size:31px;font-weight:400;color:var(--gold2)
-    }
-    .legacy-points span{
-      font-size:9px;color:#bcb3a6;
-      letter-spacing:.15em;text-transform:uppercase
-    }
+.nav {
+  display:flex;
+  align-items:center;
+  gap:clamp(20px,3vw,46px);
+  font-size:12px;
+  letter-spacing:.08em;
+  color:#d1c9bd;
+}
 
-    /* VISIT */
-    .visit{
-      background:#13110e;display:grid;
-      grid-template-columns:1fr 1fr;gap:8vw;align-items:center
-    }
-    .visit-details{margin-top:34px;display:grid;gap:22px}
-    .detail{display:flex;gap:16px;align-items:flex-start}
-    .detail-mark{
-      width:34px;height:34px;border:1px solid var(--line);
-      border-radius:50%;display:grid;place-items:center;
-      color:var(--gold2);flex:none;font-size:13px
-    }
-    .detail strong{
-      display:block;font-size:11px;
-      letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px
-    }
-    .detail p{
-      color:var(--muted);font-size:13px;line-height:1.7;margin:0
-    }
-    .map-panel{
-      min-height:390px;
-      background:linear-gradient(135deg,rgba(10,9,8,.4),rgba(10,9,8,.85)),url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover;
-      display:flex;align-items:center;justify-content:center;
-      text-align:center;padding:30px;border:1px solid var(--line)
-    }
-    .map-inner{max-width:330px}
-    .map-pin{font-size:28px;color:var(--gold2);margin-bottom:15px}
-    .map-inner h3{
-      font-family:var(--serif);font-weight:400;
-      font-size:32px;margin-bottom:12px
-    }
-    .map-inner p{
-      font-size:12px;color:#c6bcae;
-      line-height:1.8;margin-bottom:22px
-    }
-    .outline-button{
-      display:inline-flex;border:1px solid rgba(226,207,170,.6);
-      border-radius:999px;padding:13px 21px;
-      font-size:10px;letter-spacing:.13em;text-transform:uppercase;
-      transition:.25s
-    }
-    .outline-button:hover{background:var(--gold);color:#17130d}
+.nav a {transition:color .25s}
+.nav a:hover {color:var(--gold2)}
 
-    /* CLOSING AND FOOTER */
-    .closing{
-      position:relative;text-align:center;padding:120px 24px 125px;
-      background:linear-gradient(rgba(5,5,4,.82),rgba(5,5,4,.92)),url('https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1800&q=85') center/cover
-    }
-    .closing .section-title{max-width:800px;margin:0 auto 20px}
-    .closing p{
-      color:var(--muted);font-size:14px;
-      line-height:1.8;margin-bottom:30px
-    }
-    .footer{
-      padding:30px var(--pad);background:#050504;
-      border-top:1px solid rgba(226,207,170,.14);
-      display:flex;align-items:center;justify-content:space-between;
-      gap:25px;color:#8f877c;font-size:10px;letter-spacing:.08em
-    }
-    .footer-brand{color:var(--gold2);letter-spacing:.17em;font-weight:700}
-    .footer-links{display:flex;gap:22px}
-    .whatsapp-float{
-      position:fixed;z-index:30;right:25px;bottom:24px;
-      width:56px;height:56px;border-radius:50%;
-      background:#d8c49c;color:#17130d;
-      display:grid;place-items:center;box-shadow:0 8px 30px #0008;
-      transition:transform .2s
-    }
-    .whatsapp-float:hover{transform:translateY(-4px)}
-    .whatsapp-float svg{width:25px;height:25px;fill:currentColor}
+.nav-cta,.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  background:var(--ivory);
+  color:#17130d;
+  padding:14px 24px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  transition:background .25s,transform .25s;
+}
 
-    .reveal{
-      opacity:0;transform:translateY(24px);
-      transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)
-    }
-    .reveal.visible{opacity:1;transform:none}
-    @keyframes rise{
-      from{opacity:0;transform:translateY(22px)}
-      to{opacity:1;transform:none}
-    }
-    @keyframes slowZoom{
-      from{transform:scale(1.02)}
-      to{transform:scale(1.09)}
-    }
+.nav-cta:hover,.button:hover {
+  background:var(--gold2);
+  transform:translateY(-2px);
+}
 
-    @media(max-width:950px){
-      .collection-grid{grid-template-columns:repeat(2,1fr)}
-      .collection{min-height:390px}
-      .legacy{gap:6vw}
-      .legacy-visual{min-height:490px}
-      .nav{gap:18px}
-      .nav a{font-size:10px}
-      .nav-cta{padding:12px 17px}
-    }
+.burger {
+  display:none;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.07);
+  color:white;
+  border-radius:50%;
+  width:46px;
+  height:46px;
+  cursor:pointer;
+}
 
-    /* MOBILE - SAME OWNER PHOTO */
-    @media(max-width:700px){
-      .topbar{padding:20px 22px}
-      .nav,.topbar>.nav-cta{display:none}
-      .burger{display:block}
-      .mobile-menu{
-        display:flex;position:fixed;z-index:15;inset:0;
-        background:rgba(7,7,6,.97);backdrop-filter:blur(18px);
-        flex-direction:column;justify-content:center;
-        padding:90px 28px 40px;opacity:0;visibility:hidden;
-        transition:.35s
-      }
-      .mobile-menu.open{opacity:1;visibility:visible}
-      .mobile-menu a{
-        font-family:var(--serif);font-size:42px;
-        padding:10px 0;border-bottom:1px solid var(--line)
-      }
-      .mobile-menu .button{
-        font-family:var(--sans);font-size:10px;
-        margin-top:28px;align-self:flex-start
-      }
-      .burger.active span:first-child{transform:translateY(3px) rotate(45deg)}
-      .burger.active span:last-child{transform:translateY(-3px) rotate(-45deg)}
+.burger span {
+  display:block;
+  width:17px;
+  height:1px;
+  background:#fff;
+  margin:5px auto;
+  transition:.25s;
+}
 
-      .hero{
-        height:900px;min-height:780px;
-        max-height:100svh;align-items:center
-      }
-      .hero-bg{
-        background-position:57% center;
-        background-image:
-          linear-gradient(90deg,rgba(5,5,4,.88),rgba(5,5,4,.42)),
-          linear-gradient(0deg,#080807 0%,transparent 35%),
-          url('images/owner-photo.webp')
-      }
-      .hero-content{padding:100px 25px 120px;margin-top:30px}
-      .hero h1{font-size:clamp(50px,13vw,76px)}
-      .hero-copy{font-size:13px;max-width:390px}
-      .hero-actions{gap:20px}
-      .heritage-note{right:25px;bottom:58px}
-      .heritage-note strong{font-size:29px}
-      .scroll-mark{display:none}
+.mobile-menu {display:none}
 
-      section{padding:82px 24px}
-      .section-head{display:block}
-      .section-head .text-link{display:inline-block;margin-top:12px}
-      .collection-grid{gap:9px}
-      .collection{min-height:270px}
-      .collection-label{left:14px;right:10px;bottom:16px}
-      .collection-label h3{font-size:21px}
-      .collection-label small{font-size:8px}
-      .collection-label span{font-size:9px}
+/* HERO SECTION */
 
-      .legacy,.visit{grid-template-columns:1fr;gap:50px}
-      .legacy-visual{min-height:420px;margin-right:16px}
-      .legacy-visual img{width:88%}
-      .legacy-stamp{
-        width:120px;height:120px;right:-8px;bottom:24px;font-size:8px
-      }
-      .legacy-stamp strong{font-size:31px}
-      .legacy-points{gap:25px}
-      .legacy-points strong{font-size:26px}
-      .map-panel{min-height:330px}
-      .closing{padding:95px 24px}
-      .footer{flex-direction:column;text-align:center}
-      .footer-links{flex-wrap:wrap;justify-content:center}
-      .whatsapp-float{right:17px;bottom:17px;width:52px;height:52px}
-    }
+.hero {
+  position:relative;
+  min-height:750px;
+  height:min(100svh,950px);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#090908;
+}
 
-    @media(max-width:390px){
-      .collection{min-height:235px}
-      .collection-label h3{font-size:18px}
-      .hero-actions .button{padding:13px 17px}
-      .heritage-note{left:25px;right:auto}
-      .mobile-menu a{font-size:36px}
-    }
+/* OWNER PHOTO - NATURAL SIZE ON RIGHT */
 
-    @media(prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{
-        animation-duration:.001ms!important;
-        transition-duration:.001ms!important
-      }
-      .reveal{opacity:1;transform:none}
-    }
-  </style>
+.hero-bg {
+  position:absolute;
+  inset:0;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5,5,4,1) 0%,
+      rgba(5,5,4,.97) 35%,
+      rgba(5,5,4,.65) 53%,
+      rgba(5,5,4,.10) 76%,
+      rgba(5,5,4,.05) 100%
+    ),
+    linear-gradient(
+      0deg,
+      #080807 0%,
+      transparent 28%,
+      rgba(0,0,0,.12) 100%
+    ),
+    url('images/owner-photo.webp');
+
+  background-size:
+    cover,
+    cover,
+    auto 100%;
+
+  background-position:
+    center,
+    center,
+    right center;
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  transform:none;
+  animation:none;
+}
+
+.hero:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(
+    0deg,
+    #080807 0%,
+    transparent 22%
+  );
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+  padding:100px var(--pad) 90px;
+  max-width:900px;
+  margin-top:42px;
+  animation:rise .9s both;
+}
+
+.eyebrow {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:var(--gold2);
+  font-size:10px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  margin:0 0 25px;
+}
+
+.eyebrow:before {
+  content:"";
+  width:34px;
+  height:1px;
+  background:var(--gold);
+}
+
+h1,h2,h3,p {margin-top:0}
+
+.hero h1 {
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(54px,7.3vw,108px);
+  line-height:1.02;
+  letter-spacing:-.045em;
+  max-width:800px;
+  margin:0 0 24px;
+}
+
+.hero h1 em {
+  font-weight:400;
+  color:var(--gold2);
+}
+
+.hero-copy {
+  max-width:530px;
+  color:#c4bdb2;
+  font-size:15px;
+  line-height:1.9;
+  margin-bottom:34px;
+}
+
+.hero-actions {
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.text-link {
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  border-bottom:1px solid rgba(226,207,170,.65);
+  padding:0 0 7px;
+  color:#eee5d7;
+}
+
+.heritage-note {
+  position:absolute;
+  z-index:3;
+  right:var(--pad);
+  bottom:75px;
+  display:flex;
+  align-items:center;
+  gap:17px;
+  color:#e5d8c2;
+}
+
+.heritage-note strong {
+  font-family:var(--serif);
+  font-size:36px;
+  font-weight:400;
+}
+
+.heritage-note span {
+  font-size:9px;
+  letter-spacing:.2em;
+  line-height:1.7;
+  text-transform:uppercase;
+  color:#c8bdac;
+}
+
+.scroll-mark {
+  position:absolute;
+  z-index:3;
+  left:var(--pad);
+  bottom:45px;
+  color:#b8ad9c;
+  font-size:9px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.scroll-mark:before {
+  content:"";
+  width:35px;
+  height:1px;
+  background:var(--gold);
+}
+
+/* COMMON SECTIONS */
+
+section {padding:112px var(--pad)}
+
+.section-kicker {
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.section-title {
+  font-family:var(--serif);
+  font-size:clamp(38px,5vw,68px);
+  font-weight:400;
+  line-height:1.1;
+  letter-spacing:-.035em;
+  margin-bottom:18px;
+}
+
+.section-title em {
+  color:var(--gold2);
+  font-weight:400;
+}
+
+.section-intro {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.9;
+  max-width:560px;
+}
+
+/* COLLECTIONS */
+
+.collections {background:#100f0d}
+
+.section-head {
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:30px;
+  margin-bottom:48px;
+}
+
+.collection-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:13px;
+}
+
+.collection {
+  position:relative;
+  min-height:360px;
+  overflow:hidden;
+  background:#24211c;
+}
+
+.collection img {
+  width:100%;
+  height:100%;
+  position:absolute;
+  inset:0;
+  object-fit:cover;
+  filter:brightness(.78);
+  transition:transform .7s,filter .5s;
+}
+
+.collection:hover img {
+  transform:scale(1.06);
+  filter:brightness(.92);
+}
+
+.collection:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    0deg,
+    rgba(0,0,0,.82),
+    transparent 65%
+  );
+}
+
+.collection-label {
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:22px;
+  bottom:23px;
+}
+
+.collection-label small {
+  display:block;
+  color:var(--gold2);
+  font-size:9px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:9px;
+}
+
+.collection-label h3 {
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:27px;
+  margin:0;
+}
+
+.collection-label span {
+  display:block;
+  color:#d0c7ba;
+  font-size:10px;
+  margin-top:8px;
+  letter-spacing:.08em;
+}
+
+/* LEGACY */
+
+.legacy {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9vw;
+  align-items:center;
+  background:#080807;
+}
+
+.legacy-visual {
+  position:relative;
+  min-height:570px;
+}
+
+.legacy-visual img {
+  position:absolute;
+  inset:0;
+  width:85%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.8);
+}
+
+.legacy-visual:after {
+  content:"";
+  position:absolute;
+  inset:0 15% 0 0;
+  border:1px solid rgba(226,207,170,.42);
+  transform:translate(18px,18px);
+  pointer-events:none;
+}
+
+.legacy-stamp {
+  position:absolute;
+  right:0;
+  bottom:42px;
+  background:var(--gold);
+  color:#17130e;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:10px;
+  letter-spacing:.13em;
+  line-height:1.7;
+  text-transform:uppercase;
+  padding:20px;
+}
+
+.legacy-stamp strong {
+  display:block;
+  font-family:var(--serif);
+  font-size:38px;
+  letter-spacing:0;
+  font-weight:400;
+}
+
+.legacy-copy .section-title {max-width:600px}
+
+.legacy-copy p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:2;
+  max-width:520px;
+}
+
+.legacy-points {
+  display:flex;
+  gap:36px;
+  margin-top:35px;
+  padding-top:28px;
+  border-top:1px solid var(--line);
+}
+
+.legacy-points strong {
+  display:block;
+  font-family:var(--serif);
+  font-size:31px;
+  font-weight:400;
+  color:var(--gold2);
+}
+
+.legacy-points span {
+  font-size:9px;
+  color:#bcb3a6;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+
+/* VISIT US */
+
+.visit {
+  background:#13110e;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8vw;
+  align-items:center;
+}
+
+.visit-details {
+  margin-top:34px;
+  display:grid;
+  gap:22px;
+}
+
+.detail {
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+
+.detail-mark {
+  width:34px;
+  height:34px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  flex:none;
+  font-size:13px;
+}
+
+.detail strong {
+  display:block;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+
+.detail p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.7;
+  margin:0;
+}
+
+.map-panel {
+  min-height:390px;
+  background:
+    linear-gradient(135deg,rgba(10,9,8,.4),rgba(10,9,8,.85)),
+    url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px;
+  border:1px solid var(--line);
+}
+
+.map-inner {max-width:330px}
+
+.map-pin {
+  font-size:28px;
+  color:var(--gold2);
+  margin-bottom:15px;
+}
+
+.map-inner h3 {
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:32px;
+  margin-bottom:12px;
+}
+
+.map-inner p {
+  font-size:12px;
+  color:#c6bcae;
+  line-height:1.8;
+  margin-bottom:22px;
+}
+
+.outline-button {
+  display:inline-flex;
+  border:1px solid rgba(226,207,170,.6);
+  border-radius:999px;
+  padding:13px 21px;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  transition:.25s;
+}
+
+.outline-button:hover {
+  background:var(--gold);
+  color:#17130d;
+}
+
+/* CLOSING */
+
+.closing {
+  position:relative;
+  text-align:center;
+  padding:120px 24px 125px;
+  background:
+    linear-gradient(rgba(5,5,4,.82),rgba(5,5,4,.92)),
+    url('https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1800&q=85') center/cover;
+}
+
+.closing .section-title {
+  max-width:800px;
+  margin:0 auto 20px;
+}
+
+.closing p {
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding:30px var(--pad);
+  background:#050504;
+  border-top:1px solid rgba(226,207,170,.14);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+  color:#8f877c;
+  font-size:10px;
+  letter-spacing:.08em;
+}
+
+.footer-brand {
+  color:var(--gold2);
+  letter-spacing:.17em;
+  font-weight:700;
+}
+
+.footer-links {
+  display:flex;
+  gap:22px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float {
+  position:fixed;
+  z-index:30;
+  right:25px;
+  bottom:24px;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:#d8c49c;
+  color:#17130d;
+  display:grid;
+  place-items:center;
+  box-shadow:0 8px 30px #0008;
+  transition:transform .2s;
+}
+
+.whatsapp-float:hover {transform:translateY(-4px)}
+.whatsapp-float svg {
+  width:25px;
+  height:25px;
+  fill:currentColor;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal.visible {
+  opacity:1;
+  transform:none;
+}
+
+@keyframes rise {
+  from {opacity:0;transform:translateY(22px)}
+  to {opacity:1;transform:none}
+}
+
+/* TABLET */
+
+@media(max-width:950px) {
+  .collection-grid {grid-template-columns:repeat(2,1fr)}
+  .collection {min-height:390px}
+  .legacy {gap:6vw}
+  .legacy-visual {min-height:490px}
+  .nav {gap:18px}
+  .nav a {font-size:10px}
+  .nav-cta {padding:12px 17px}
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+  .topbar {padding:20px 22px}
+  .nav,.topbar>.nav-cta {display:none}
+  .burger {display:block}
+
+  .mobile-menu {
+    display:flex;
+    position:fixed;
+    z-index:15;
+    inset:0;
+    background:rgba(7,7,6,.97);
+    backdrop-filter:blur(18px);
+    flex-direction:column;
+    justify-content:center;
+    padding:90px 28px 40px;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+  }
+
+  .mobile-menu.open {
+    opacity:1;
+    visibility:visible;
+  }
+
+  .mobile-menu a {
+    font-family:var(--serif);
+    font-size:42px;
+    padding:10px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .mobile-menu .button {
+    font-family:var(--sans);
+    font-size:10px;
+    margin-top:28px;
+    align-self:flex-start;
+  }
+
+  .burger.active span:first-child {
+    transform:translateY(3px) rotate(45deg);
+  }
+
+  .burger.active span:last-child {
+    transform:translateY(-3px) rotate(-45deg);
+  }
+
+  .hero {
+    height:850px;
+    min-height:780px;
+    max-height:100svh;
+    align-items:center;
+  }
+
+  /* MOBILE OWNER PHOTO */
+  .hero-bg {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(5,5,4,.96) 0%,
+        rgba(5,5,4,.78) 45%,
+        rgba(5,5,4,.22) 100%
+      ),
+      linear-gradient(
+        0deg,
+        #080807 0%,
+        transparent 35%
+      ),
+      url('images/owner-photo.webp');
+
+    background-size:
+      cover,
+      cover,
+      auto 100%;
+
+    background-position:
+      center,
+      center,
+      right center;
+
+    background-repeat:no-repeat;
+    transform:none;
+    animation:none;
+  }
+
+  .hero-content {
+    padding:100px 25px 120px;
+    margin-top:30px;
+  }
+
+  .hero h1 {
+    font-size:clamp(50px,13vw,76px);
+  }
+
+  .hero-copy {
+    font-size:13px;
+    max-width:390px;
+  }
+
+  .hero-actions {gap:20px}
+  .heritage-note {right:25px;bottom:58px}
+  .heritage-note strong {font-size:29px}
+  .scroll-mark {display:none}
+
+  section {padding:82px 24px}
+  .section-head {display:block}
+
+  .section-head .text-link {
+    display:inline-block;
+    margin-top:12px;
+  }
+
+  .collection-grid {gap:9px}
+  .collection {min-height:270px}
+
+  .collection-label {
+    left:14px;
+    right:10px;
+    bottom:16px;
+  }
+
+  .collection-label h3 {font-size:21px}
+  .collection-label small {font-size:8px}
+  .collection-label span {font-size:9px}
+
+  .legacy,.visit {
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .legacy-visual {
+    min-height:420px;
+    margin-right:16px;
+  }
+
+  .legacy-visual img {width:88%}
+
+  .legacy-stamp {
+    width:120px;
+    height:120px;
+    right:-8px;
+    bottom:24px;
+    font-size:8px;
+  }
+
+  .legacy-stamp strong {font-size:31px}
+  .legacy-points {gap:25px}
+  .legacy-points strong {font-size:26px}
+  .map-panel {min-height:330px}
+  .closing {padding:95px 24px}
+
+  .footer {
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .footer-links {
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .whatsapp-float {
+    right:17px;
+    bottom:17px;
+    width:52px;
+    height:52px;
+  }
+}
+
+@media(max-width:390px) {
+  .collection {min-height:235px}
+  .collection-label h3 {font-size:18px}
+  .hero-actions .button {padding:13px 17px}
+  .heritage-note {
+    left:25px;
+    right:auto;
+  }
+  .mobile-menu a {font-size:36px}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  *,*::before,*::after {
+    animation-duration:.001ms!important;
+    transition-duration:.001ms!important;
+  }
+  .reveal {
+    opacity:1;
+    transform:none;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Sithik Silk Centre home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-name">SITHIK<span>SILK CENTRE</span></span>
-    </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#collections">Collections</a>
-      <a href="#legacy">Our Legacy</a>
-      <a href="#visit">Visit Us</a>
-    </nav>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Sithik Silk Centre home">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">SITHIK<span>SILK CENTRE</span></span>
+  </a>
 
-    <a class="nav-cta" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
-
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span>
-    </button>
-  </header>
-
-  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="nav" aria-label="Primary navigation">
     <a href="#collections">Collections</a>
     <a href="#legacy">Our Legacy</a>
     <a href="#visit">Visit Us</a>
-    <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
   </nav>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-      <div class="hero-bg" aria-hidden="true"></div>
+  <a class="nav-cta" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
 
-      <div class="hero-content">
-        <p class="eyebrow">Three generations · Over 50 years</p>
-        <h1>A Legacy Woven<br>Through <em>Generations.</em></h1>
-        <p class="hero-copy">
-          Explore a wide retail collection of silk and cotton sarees, men’s, women’s and kids’ clothing, dress materials and everyday essentials. Three generations of service, quality and trust.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#collections">Explore Collections</a>
-          <a class="text-link" href="#legacy">Discover Our Story</a>
-        </div>
-      </div>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+    <span></span><span></span>
+  </button>
+</header>
 
-      <div class="heritage-note">
-        <strong>50+</strong>
-        <span>Years of<br>textile heritage</span>
-      </div>
-      <div class="scroll-mark">Scroll to discover</div>
-    </section>
+<nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#collections">Collections</a>
+  <a href="#legacy">Our Legacy</a>
+  <a href="#visit">Visit Us</a>
+  <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</nav>
 
-    <!-- COLLECTIONS -->
-    <section class="collections" id="collections">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker">Made for every generation</p>
-          <h2 class="section-title">Find your <em>style.</em></h2>
-          <p class="section-intro">
-            Explore a world of clothing for every age, occasion and everyday moment. From traditional favourites to modern retail essentials.
-          </p>
-        </div>
-        <a class="text-link" href="https://wa.me/919840331527?text=Hello%2C%20please%20share%20your%20available%20collections." target="_blank" rel="noopener">Ask about collections</a>
-      </div>
+<main>
 
-      <div class="collection-grid">
+<!-- HERO -->
 
-        <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20men%27s%20clothing." target="_blank" rel="noopener">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=850&q=80" alt="Men's fashion collection">
-          <div class="collection-label">
-            <small>01 / Everyday to occasion</small>
-            <h3>Men's Wear</h3>
-            <span>Shirts · Trousers · More</span>
-          </div>
-        </a>
+<section class="hero" id="home">
+  <div class="hero-bg" aria-hidden="true"></div>
 
-        <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20women%27s%20clothing%20and%20sarees." target="_blank" rel="noopener">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=850&q=80" alt="Traditional women's clothing">
-          <div class="collection-label">
-            <small>02 / Timeless elegance</small>
-            <h3>Women's Wear</h3>
-            <span>Sarees · Chudithars · More</span>
-          </div>
-        </a>
+  <div class="hero-content">
+    <p class="eyebrow">Three generations · Over 50 years</p>
 
-        <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20kids%27%20clothing." target="_blank" rel="noopener">
-          <img loading="lazy" src="images/kids-wear.webp" alt="Kids’ traditional clothing collection">
-          <div class="collection-label">
-            <small>03 / Little moments</small>
-            <h3>Kids' Wear</h3>
-            <span>Comfort · Colour · Style</span>
-          </div>
-        </a>
+    <h1>A Legacy Woven<br>Through <em>Generations.</em></h1>
 
-        <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20silk%20and%20cotton%20sarees." target="_blank" rel="noopener">
-          <img loading="lazy" src="images/silk-cotton.webp" alt="Folded silk and cotton sarees available in store">
-          <div class="collection-label">
-            <small>04 / Woven tradition</small>
-            <h3>Silk & Cotton</h3>
-            <span>Sarees · Dress Materials</span>
-          </div>
-        </a>
+    <p class="hero-copy">
+      Explore a wide retail collection of silk and cotton sarees, men’s, women’s and kids’ clothing, dress materials and everyday essentials. Three generations of service, quality and trust.
+    </p>
 
-      </div>
-
-      <p class="section-intro" style="margin:28px 0 0;max-width:none;font-size:11px">
-        Also available: readymade garments, fabrics, dress materials, shirts, trousers and more — all part of our retail collection.
-      </p>
-    </section>
-
-    <!-- LEGACY -->
-    <section class="legacy" id="legacy">
-      <div class="legacy-visual reveal">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1100&q=85" alt="A selection of traditional fabrics available at our retail store">
-        <div class="legacy-stamp">
-          <div>
-            <strong>50+</strong>
-            Years of<br>trust & tradition
-          </div>
-        </div>
-      </div>
-
-      <div class="legacy-copy reveal">
-        <p class="section-kicker">Our story · Our promise</p>
-        <h2 class="section-title">A family tradition, <em>stitched with trust.</em></h2>
-
-        <p>
-          For over 50 years, SITHIK SILK CENTRE has been part of a family tradition that spans three generations. As a family-run retail store, we continue to serve customers with thoughtful selections, dependable choices and a warm welcome. Our focus is bringing a wide range of ready-to-wear clothing, sarees and dress materials together in one place.
-        </p>
-
-        <p>
-          Today, our retail collections include clothing for men, women and children, alongside sarees, dress materials and everyday essentials — all available under one roof.
-        </p>
-
-        <div class="legacy-points">
-          <div><strong>50+</strong><span>Years of heritage</span></div>
-          <div><strong>3</strong><span>Generations</span></div>
-          <div><strong>All</strong><span>Family collections</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-      <div class="reveal">
-        <p class="section-kicker">We look forward to welcoming you</p>
-        <h2 class="section-title">Come by. <em>Explore.</em></h2>
-        <p class="section-intro">
-          Visit SITHIK SILK CENTRE in Elavur and explore clothing for the whole family.
-        </p>
-
-        <div class="visit-details">
-          <div class="detail">
-            <span class="detail-mark">⌖</span>
-            <div>
-              <strong>Find our store</strong>
-              <p>F467+3FH, NH 16, Thurapallam,<br>Elavur, Tiruvallur District,<br>Tamil Nadu – 601201</p>
-            </div>
-          </div>
-
-          <div class="detail">
-            <span class="detail-mark">◷</span>
-            <div>
-              <strong>Store hours</strong>
-              <p>Open daily · 9:00 AM – 9:00 PM</p>
-            </div>
-          </div>
-
-          <div class="detail">
-            <span class="detail-mark">↗</span>
-            <div>
-              <strong>Call or WhatsApp</strong>
-              <p>+91 98403 31527</p>
-            </div>
-          </div>
-
-          <div class="detail">
-            <span class="detail-mark">✦</span>
-            <div>
-              <strong>Owner</strong>
-              <p>Sithik Moosa</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="map-panel reveal">
-        <div class="map-inner">
-          <div class="map-pin">⌖</div>
-          <h3>Visit us in Elavur</h3>
-          <p>Find us on NH 16, Thurapallam, Elavur, Tiruvallur District, Tamil Nadu.</p>
-          <a class="outline-button" href="https://maps.app.goo.gl/Yd7oUxuT8R6pZkFc9" target="_blank" rel="noopener">Get directions</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING -->
-    <section class="closing">
-      <p class="section-kicker">A tradition that continues</p>
-      <h2 class="section-title">For every family.<br><em>For every generation.</em></h2>
-      <p>Have a question about our collections? Get in touch with us directly.</p>
-      <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Chat with us on WhatsApp</a>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-brand">SITHIK SILK CENTRE</div>
-    <div>© <span id="year"></span> SITHIK SILK CENTRE. A family retail tradition for over 50 years.</div>
-    <div class="footer-links">
-      <a href="#collections">Collections</a>
-      <a href="#legacy">Our Story</a>
-      <a href="#visit">Location</a>
+    <div class="hero-actions">
+      <a class="button" href="#collections">Explore Collections</a>
+      <a class="text-link" href="#legacy">Discover Our Story</a>
     </div>
-  </footer>
+  </div>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a class="whatsapp-float" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with SITHIK SILK CENTRE on WhatsApp">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.74 6.45L3 29l6.82-1.79a12.95 12.95 0 0 0 6.21 1.58h.01c7.13 0 12.93-5.79 12.94-12.9A12.83 12.83 0 0 0 25.2 6.7 12.86 12.86 0 0 0 16.04 3zm0 23.6h-.01c-1.93 0-3.82-.52-5.47-1.5l-.39-.23-4.05 1.06 1.08-3.94-.25-.4a10.7 10.7 0 0 1-1.64-5.7c0-5.92 4.82-10.73 10.75-10.73 2.87 0 5.56 1.12 7.59 3.15a10.65 10.65 0 0 1 3.14 7.6c0 5.92-4.82 10.73-10.75 10.73zm5.9-8.04c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.57.14-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.1 1.32 3.31c.16.22 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37z"/>
-    </svg>
-  </a>
+  <div class="heritage-note">
+    <strong>50+</strong>
+    <span>Years of<br>textile heritage</span>
+  </div>
 
-  <script>
-    const burger=document.getElementById('burger');
-    const menu=document.getElementById('mobileMenu');
+  <div class="scroll-mark">Scroll to discover</div>
+</section>
 
-    function closeMenu(){
-      burger.classList.remove('active');
-      menu.classList.remove('open');
-      burger.setAttribute('aria-expanded','false');
-      burger.setAttribute('aria-label','Open menu');
-      menu.setAttribute('aria-hidden','true')
+<!-- COLLECTIONS -->
+
+<section class="collections" id="collections">
+
+  <div class="section-head reveal">
+    <div>
+      <p class="section-kicker">Made for every generation</p>
+      <h2 class="section-title">Find your <em>style.</em></h2>
+      <p class="section-intro">
+        Explore a world of clothing for every age, occasion and everyday moment. From traditional favourites to modern retail essentials.
+      </p>
+    </div>
+
+    <a class="text-link" href="https://wa.me/919840331527?text=Hello%2C%20please%20share%20your%20available%20collections." target="_blank" rel="noopener">Ask about collections</a>
+  </div>
+
+  <div class="collection-grid">
+
+    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20men%27s%20clothing." target="_blank" rel="noopener">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=850&q=80" alt="Men's fashion collection">
+      <div class="collection-label">
+        <small>01 / Everyday to occasion</small>
+        <h3>Men's Wear</h3>
+        <span>Shirts · Trousers · More</span>
+      </div>
+    </a>
+
+    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20women%27s%20clothing%20and%20sarees." target="_blank" rel="noopener">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=850&q=80" alt="Traditional women's clothing">
+      <div class="collection-label">
+        <small>02 / Timeless elegance</small>
+        <h3>Women's Wear</h3>
+        <span>Sarees · Chudithars · More</span>
+      </div>
+    </a>
+
+    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20kids%27%20clothing." target="_blank" rel="noopener">
+      <img loading="lazy" src="images/kids-wear.webp" alt="Kids traditional clothing collection">
+      <div class="collection-label">
+        <small>03 / Little moments</small>
+        <h3>Kids' Wear</h3>
+        <span>Comfort · Colour · Style</span>
+      </div>
+    </a>
+
+    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20silk%20and%20cotton%20sarees." target="_blank" rel="noopener">
+      <img loading="lazy" src="images/silk-cotton.webp" alt="Folded silk and cotton sarees">
+      <div class="collection-label">
+        <small>04 / Woven tradition</small>
+        <h3>Silk & Cotton</h3>
+        <span>Sarees · Dress Materials</span>
+      </div>
+    </a>
+
+  </div>
+
+  <p class="section-intro" style="margin:28px 0 0;max-width:none;font-size:11px">
+    Also available: readymade garments, fabrics, dress materials, shirts, trousers and more — all part of our retail collection.
+  </p>
+
+</section>
+
+<!-- LEGACY -->
+
+<section class="legacy" id="legacy">
+
+  <div class="legacy-visual reveal">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1100&q=85" alt="Traditional fabrics">
+    <div class="legacy-stamp">
+      <div>
+        <strong>50+</strong>
+        Years of<br>trust & tradition
+      </div>
+    </div>
+  </div>
+
+  <div class="legacy-copy reveal">
+    <p class="section-kicker">Our story · Our promise</p>
+
+    <h2 class="section-title">A family tradition, <em>stitched with trust.</em></h2>
+
+    <p>
+      For over 50 years, SITHIK SILK CENTRE has been part of a family tradition that spans three generations. As a family-run retail store, we continue to serve customers with thoughtful selections, dependable choices and a warm welcome. Our focus is bringing a wide range of ready-to-wear clothing, sarees and dress materials together in one place.
+    </p>
+
+    <p>
+      Today, our retail collections include clothing for men, women and children, alongside sarees, dress materials and everyday essentials — all available under one roof.
+    </p>
+
+    <div class="legacy-points">
+      <div><strong>50+</strong><span>Years of heritage</span></div>
+      <div><strong>3</strong><span>Generations</span></div>
+      <div><strong>All</strong><span>Family collections</span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- VISIT US -->
+
+<section class="visit" id="visit">
+
+  <div class="reveal">
+    <p class="section-kicker">We look forward to welcoming you</p>
+
+    <h2 class="section-title">Come by. <em>Explore.</em></h2>
+
+    <p class="section-intro">
+      Visit SITHIK SILK CENTRE in Elavur and explore clothing for the whole family.
+    </p>
+
+    <div class="visit-details">
+
+      <div class="detail">
+        <span class="detail-mark">⌖</span>
+        <div>
+          <strong>Find our store</strong>
+          <p>F467+3FH, NH 16, Thurapallam,<br>Elavur, Tiruvallur District,<br>Tamil Nadu – 601201</p>
+        </div>
+      </div>
+
+      <div class="detail">
+        <span class="detail-mark">◷</span>
+        <div>
+          <strong>Store hours</strong>
+          <p>Open daily · 9:00 AM – 9:00 PM</p>
+        </div>
+      </div>
+
+      <div class="detail">
+        <span class="detail-mark">↗</span>
+        <div>
+          <strong>Call or WhatsApp</strong>
+          <p>+91 98403 31527</p>
+        </div>
+      </div>
+
+      <div class="detail">
+        <span class="detail-mark">✦</span>
+        <div>
+          <strong>Owner</strong>
+          <p>Sithik Moosa</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="map-panel reveal">
+    <div class="map-inner">
+      <div class="map-pin">⌖</div>
+      <h3>Visit us in Elavur</h3>
+      <p>Find us on NH 16, Thurapallam, Elavur, Tiruvallur District, Tamil Nadu.</p>
+      <a class="outline-button" href="https://maps.app.goo.gl/Yd7oUxuT8R6pZkFc9" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
+<section class="closing">
+  <p class="section-kicker">A tradition that continues</p>
+
+  <h2 class="section-title">
+    For every family.<br>
+    <em>For every generation.</em>
+  </h2>
+
+  <p>Have a question about our collections? Get in touch with us directly.</p>
+
+  <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+  <div class="footer-brand">SITHIK SILK CENTRE</div>
+
+  <div>
+    © <span id="year"></span> SITHIK SILK CENTRE. A family retail tradition for over 50 years.
+  </div>
+
+  <div class="footer-links">
+    <a href="#collections">Collections</a>
+    <a href="#legacy">Our Story</a>
+    <a href="#visit">Location</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a class="whatsapp-float" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with SITHIK SILK CENTRE on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.74 6.45L3 29l6.82-1.79a12.95 12.95 0 0 0 6.21 1.58h.01c7.13 0 12.93-5.79 12.94-12.9A12.83 12.83 0 0 0 25.2 6.7 12.86 12.86 0 0 0 16.04 3zm0 23.6h-.01c-1.93 0-3.82-.52-5.47-1.5l-.39-.23-4.05 1.06 1.08-3.94-.25-.4a10.7 10.7 0 0 1-1.64-5.7c0-5.92 4.82-10.73 10.75-10.73 2.87 0 5.56 1.12 7.59 3.15a10.65 10.65 0 0 1 3.14 7.6c0 5.92-4.82 10.73-10.75 10.73zm5.9-8.04c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.57.14-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.1 1.32 3.31c.16.22 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37z"/>
+  </svg>
+</a>
+
+<script>
+const burger=document.getElementById('burger');
+const menu=document.getElementById('mobileMenu');
+
+function closeMenu(){
+  burger.classList.remove('active');
+  menu.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  burger.setAttribute('aria-label','Open menu');
+  menu.setAttribute('aria-hidden','true');
+}
+
+burger.addEventListener('click',()=>{
+  const open=!menu.classList.contains('open');
+  menu.classList.toggle('open',open);
+  burger.classList.toggle('active',open);
+  burger.setAttribute('aria-expanded',String(open));
+  burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+  menu.setAttribute('aria-hidden',String(!open));
+});
+
+menu.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click',closeMenu);
+});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeMenu();
+});
+
+window.addEventListener('resize',()=>{
+  if(window.innerWidth>700)closeMenu();
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
+  });
+},{threshold:.12});
 
-    burger.addEventListener('click',()=>{
-      const open=!menu.classList.contains('open');
-      menu.classList.toggle('open',open);
-      burger.classList.toggle('active',open);
-      burger.setAttribute('aria-expanded',String(open));
-      burger.setAttribute('aria-label',open?'Close menu':'Open menu');
-      menu.setAttribute('aria-hidden',String(!open))
-    });
+document.querySelectorAll('.reveal').forEach(el=>{
+  observer.observe(el);
+});
+</script>
 
-    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-    document.addEventListener('keydown',e=>{
-      if(e.key==='Escape')closeMenu()
-    });
-    window.addEventListener('resize',()=>{
-      if(window.innerWidth>700)closeMenu()
-    });
-
-    document.getElementById('year').textContent=new Date().getFullYear();
-
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target)
-        }
-      })
-    },{threshold:.12});
-
-    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-  </script>
 </body>
 </html>
