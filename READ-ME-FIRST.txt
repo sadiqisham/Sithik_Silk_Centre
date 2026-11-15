@@ -1,0 +1,7 @@
+SITHIK SILK CENTRE WEBSITE
+
+1. Keep index.html and the images folder together.
+2. Double-click index.html to preview the website in your browser.
+3. For GitHub Pages, upload/replace index.html and the complete images folder.
+
+The homepage hero now uses a locally stored Indian family portrait (images/family-portrait.webp), not an external image URL.
