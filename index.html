@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080807">
-<meta name="description" content="SITHIK SILK CENTRE is a family-run textile store in Elavur, Tamil Nadu. Three generations of quality and trust for over 50 years.">
+<meta name="description" content="SITHIK SILK CENTRE - Three generations of textile heritage, quality and trust for over 50 years.">
 <title>SITHIK SILK CENTRE | A Legacy Woven Through Generations</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,22 +28,23 @@
 
 * {box-sizing:border-box}
 html {scroll-behavior:smooth}
+
 body {
   margin:0;
   background:var(--black);
   color:var(--ivory);
   font-family:var(--sans);
-  text-rendering:geometricPrecision;
   -webkit-font-smoothing:antialiased;
 }
-a {color:inherit;text-decoration:none}
-button {font:inherit}
 
-/* NAVIGATION */
+a {color:inherit;text-decoration:none}
+h1,h2,h3,p {margin-top:0}
+
+/* HEADER */
 
 .topbar {
   position:absolute;
-  z-index:20;
+  z-index:30;
   inset:0 0 auto;
   display:flex;
   align-items:center;
@@ -65,23 +66,12 @@ button {font:inherit}
   display:block;
 }
 
-.brand-mark:before,
-.brand-mark:after {
+.brand-mark:before {
   content:"";
   position:absolute;
+  inset:0;
   background:linear-gradient(145deg,#f1dfba,#a98755);
   clip-path:polygon(48% 0,100% 0,100% 42%,62% 42%,62% 100%,0 100%,0 58%,48% 58%);
-}
-
-.brand-mark:before {inset:0}
-
-.brand-mark:after {
-  width:11px;
-  height:12px;
-  right:0;
-  top:17px;
-  background:var(--black);
-  clip-path:none;
 }
 
 .brand-name {
@@ -108,7 +98,6 @@ button {font:inherit}
   color:#d1c9bd;
 }
 
-.nav a {transition:color .25s}
 .nav a:hover {color:var(--gold2)}
 
 .nav-cta,.button {
@@ -123,7 +112,7 @@ button {font:inherit}
   font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
-  transition:background .25s,transform .25s;
+  transition:.25s;
 }
 
 .nav-cta:hover,.button:hover {
@@ -153,7 +142,7 @@ button {font:inherit}
 
 .mobile-menu {display:none}
 
-/* HERO SECTION */
+/* DESKTOP HERO - NO OWNER PHOTO */
 
 .hero {
   position:relative;
@@ -162,50 +151,26 @@ button {font:inherit}
   display:flex;
   align-items:center;
   overflow:hidden;
-  background:#090908;
+  background:#080807;
 }
-
-/* OWNER PHOTO - NATURAL SIZE ON RIGHT */
 
 .hero-bg {
   position:absolute;
   inset:0;
-
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(5,5,4,1) 0%,
-      rgba(5,5,4,.97) 35%,
-      rgba(5,5,4,.65) 53%,
-      rgba(5,5,4,.10) 76%,
-      rgba(5,5,4,.05) 100%
+  background:
+    radial-gradient(
+      ellipse at 78% 45%,
+      rgba(200,173,125,.10),
+      transparent 48%
     ),
     linear-gradient(
-      0deg,
+      110deg,
       #080807 0%,
-      transparent 28%,
-      rgba(0,0,0,.12) 100%
-    ),
-    url('images/owner-photo.webp');
-
-  background-size:
-    cover,
-    cover,
-    auto 100%;
-
-  background-position:
-    center,
-    center,
-    right center;
-
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat;
-
-  transform:none;
-  animation:none;
+      #11100e 100%
+    );
 }
+
+.mobile-owner {display:none}
 
 .hero:after {
   content:"";
@@ -223,7 +188,7 @@ button {font:inherit}
   position:relative;
   z-index:2;
   padding:100px var(--pad) 90px;
-  max-width:900px;
+  max-width:1000px;
   margin-top:42px;
   animation:rise .9s both;
 }
@@ -236,7 +201,7 @@ button {font:inherit}
   font-size:10px;
   letter-spacing:.28em;
   text-transform:uppercase;
-  margin:0 0 25px;
+  margin-bottom:25px;
 }
 
 .eyebrow:before {
@@ -245,8 +210,6 @@ button {font:inherit}
   height:1px;
   background:var(--gold);
 }
-
-h1,h2,h3,p {margin-top:0}
 
 .hero h1 {
   font-family:var(--serif);
@@ -283,9 +246,11 @@ h1,h2,h3,p {margin-top:0}
   letter-spacing:.13em;
   text-transform:uppercase;
   border-bottom:1px solid rgba(226,207,170,.65);
-  padding:0 0 7px;
+  padding-bottom:7px;
   color:#eee5d7;
 }
+
+.text-link:hover {color:var(--gold2)}
 
 .heritage-note {
   position:absolute;
@@ -449,7 +414,7 @@ section {padding:112px var(--pad)}
   letter-spacing:.08em;
 }
 
-/* LEGACY */
+/* LEGACY - OWNER PORTRAIT */
 
 .legacy {
   display:grid;
@@ -462,34 +427,43 @@ section {padding:112px var(--pad)}
 .legacy-visual {
   position:relative;
   min-height:570px;
+  background:#171512;
+  overflow:hidden;
+  border:1px solid rgba(226,207,170,.25);
 }
 
 .legacy-visual img {
   position:absolute;
   inset:0;
-  width:85%;
+  width:100%;
   height:100%;
   object-fit:cover;
-  filter:brightness(.8);
+  object-position:center 22%;
+  filter:none;
+  transition:transform .7s;
+}
+
+.legacy-visual:hover img {
+  transform:scale(1.025);
 }
 
 .legacy-visual:after {
   content:"";
   position:absolute;
-  inset:0 15% 0 0;
-  border:1px solid rgba(226,207,170,.42);
-  transform:translate(18px,18px);
+  inset:15px;
+  border:1px solid rgba(226,207,170,.3);
   pointer-events:none;
 }
 
 .legacy-stamp {
   position:absolute;
-  right:0;
-  bottom:42px;
+  z-index:2;
+  right:20px;
+  bottom:25px;
   background:var(--gold);
   color:#17130e;
-  width:150px;
-  height:150px;
+  width:145px;
+  height:145px;
   border-radius:50%;
   display:flex;
   align-items:center;
@@ -695,7 +669,7 @@ section {padding:112px var(--pad)}
 
 .whatsapp-float {
   position:fixed;
-  z-index:30;
+  z-index:40;
   right:25px;
   bottom:24px;
   width:56px;
@@ -710,6 +684,7 @@ section {padding:112px var(--pad)}
 }
 
 .whatsapp-float:hover {transform:translateY(-4px)}
+
 .whatsapp-float svg {
   width:25px;
   height:25px;
@@ -749,14 +724,20 @@ section {padding:112px var(--pad)}
 /* MOBILE */
 
 @media(max-width:700px) {
+
   .topbar {padding:20px 22px}
-  .nav,.topbar>.nav-cta {display:none}
+
+  .nav,
+  .topbar>.nav-cta {
+    display:none;
+  }
+
   .burger {display:block}
 
   .mobile-menu {
     display:flex;
     position:fixed;
-    z-index:15;
+    z-index:35;
     inset:0;
     background:rgba(7,7,6,.97);
     backdrop-filter:blur(18px);
@@ -795,64 +776,77 @@ section {padding:112px var(--pad)}
     transform:translateY(-3px) rotate(-45deg);
   }
 
+  /* MOBILE PORTRAIT SPOTLIGHT */
+
   .hero {
-    height:850px;
-    min-height:780px;
-    max-height:100svh;
-    align-items:center;
+    display:block;
+    height:auto;
+    min-height:0;
+    max-height:none;
+    padding-top:90px;
+    overflow:hidden;
+    background:#080807;
   }
 
-  /* MOBILE OWNER PHOTO */
-  .hero-bg {
-    background-image:
-      linear-gradient(
-        90deg,
-        rgba(5,5,4,.96) 0%,
-        rgba(5,5,4,.78) 45%,
-        rgba(5,5,4,.22) 100%
-      ),
-      linear-gradient(
-        0deg,
-        #080807 0%,
-        transparent 35%
-      ),
-      url('images/owner-photo.webp');
+  .hero-bg {display:none}
+  .hero:after {display:none}
 
-    background-size:
-      cover,
-      cover,
-      auto 100%;
-
-    background-position:
-      center,
-      center,
-      right center;
-
-    background-repeat:no-repeat;
-    transform:none;
-    animation:none;
+  .mobile-owner {
+    display:block;
+    width:calc(100% - 40px);
+    height:390px;
+    margin:0 auto;
+    object-fit:cover;
+    object-position:center 22%;
+    background:#171512;
+    border:1px solid rgba(226,207,170,.3);
+    border-radius:3px;
   }
 
   .hero-content {
-    padding:100px 25px 120px;
-    margin-top:30px;
+    position:relative;
+    z-index:2;
+    padding:35px 25px 75px;
+    margin:0;
+    max-width:100%;
+    animation:rise .9s both;
+  }
+
+  .eyebrow {
+    font-size:9px;
+    letter-spacing:.22em;
+    margin-bottom:19px;
   }
 
   .hero h1 {
-    font-size:clamp(50px,13vw,76px);
+    font-size:clamp(43px,11vw,58px);
+    line-height:1.08;
+    letter-spacing:-.04em;
+    margin-bottom:20px;
   }
 
   .hero-copy {
     font-size:13px;
     max-width:390px;
+    line-height:1.85;
+    margin-bottom:26px;
   }
 
-  .hero-actions {gap:20px}
-  .heritage-note {right:25px;bottom:58px}
-  .heritage-note strong {font-size:29px}
-  .scroll-mark {display:none}
+  .hero-actions {gap:17px}
+
+  .hero-actions .button {
+    padding:14px 19px;
+  }
+
+  .heritage-note,
+  .scroll-mark {
+    display:none;
+  }
+
+  /* COLLECTIONS */
 
   section {padding:82px 24px}
+
   .section-head {display:block}
 
   .section-head .text-link {
@@ -861,6 +855,7 @@ section {padding:112px var(--pad)}
   }
 
   .collection-grid {gap:9px}
+
   .collection {min-height:270px}
 
   .collection-label {
@@ -873,30 +868,31 @@ section {padding:112px var(--pad)}
   .collection-label small {font-size:8px}
   .collection-label span {font-size:9px}
 
-  .legacy,.visit {
+  /* LEGACY - AVOID DUPLICATING MOBILE PORTRAIT */
+
+  .legacy {
+    display:block;
+  }
+
+  .legacy-visual {
+    display:none;
+  }
+
+  .legacy-copy {width:100%}
+
+  .legacy-points {gap:25px}
+
+  .legacy-points strong {font-size:26px}
+
+  /* VISIT */
+
+  .visit {
     grid-template-columns:1fr;
     gap:50px;
   }
 
-  .legacy-visual {
-    min-height:420px;
-    margin-right:16px;
-  }
-
-  .legacy-visual img {width:88%}
-
-  .legacy-stamp {
-    width:120px;
-    height:120px;
-    right:-8px;
-    bottom:24px;
-    font-size:8px;
-  }
-
-  .legacy-stamp strong {font-size:31px}
-  .legacy-points {gap:25px}
-  .legacy-points strong {font-size:26px}
   .map-panel {min-height:330px}
+
   .closing {padding:95px 24px}
 
   .footer {
@@ -918,22 +914,32 @@ section {padding:112px var(--pad)}
 }
 
 @media(max-width:390px) {
+
+  .mobile-owner {height:350px}
+
   .collection {min-height:235px}
+
   .collection-label h3 {font-size:18px}
-  .hero-actions .button {padding:13px 17px}
-  .heritage-note {
-    left:25px;
-    right:auto;
+
+  .hero h1 {font-size:43px}
+
+  .hero-actions .button {
+    padding:13px 17px;
   }
+
   .mobile-menu a {font-size:36px}
 }
 
+/* ACCESSIBILITY */
+
 @media(prefers-reduced-motion:reduce) {
   html {scroll-behavior:auto}
+
   *,*::before,*::after {
     animation-duration:.001ms!important;
     transition-duration:.001ms!important;
   }
+
   .reveal {
     opacity:1;
     transform:none;
@@ -944,7 +950,10 @@ section {padding:112px var(--pad)}
 
 <body>
 
+<!-- HEADER -->
+
 <header class="topbar">
+
   <a class="brand" href="#home" aria-label="Sithik Silk Centre home">
     <span class="brand-mark" aria-hidden="true"></span>
     <span class="brand-name">SITHIK<span>SILK CENTRE</span></span>
@@ -956,18 +965,34 @@ section {padding:112px var(--pad)}
     <a href="#visit">Visit Us</a>
   </nav>
 
-  <a class="nav-cta" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+  <a class="nav-cta"
+     href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire."
+     target="_blank" rel="noopener">
+    Enquire on WhatsApp
+  </a>
 
-  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span><span></span>
+  <button class="burger" id="burger"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+    <span></span>
+    <span></span>
   </button>
+
 </header>
+
+<!-- MOBILE MENU -->
 
 <nav class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <a href="#collections">Collections</a>
   <a href="#legacy">Our Legacy</a>
   <a href="#visit">Visit Us</a>
-  <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+
+  <a class="button"
+     href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20enquire."
+     target="_blank" rel="noopener">
+    Enquire on WhatsApp
+  </a>
 </nav>
 
 <main>
@@ -975,21 +1000,44 @@ section {padding:112px var(--pad)}
 <!-- HERO -->
 
 <section class="hero" id="home">
+
   <div class="hero-bg" aria-hidden="true"></div>
 
-  <div class="hero-content">
-    <p class="eyebrow">Three generations · Over 50 years</p>
+  <!-- Used only on mobile -->
+  <img
+    class="mobile-owner"
+    src="images/owner-photo.webp"
+    alt="Owner of Sithik Silk Centre"
+    fetchpriority="high"
+  >
 
-    <h1>A Legacy Woven<br>Through <em>Generations.</em></h1>
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      Three generations · Over 50 years
+    </p>
+
+    <h1>
+      A Legacy Woven<br>
+      Through <em>Generations.</em>
+    </h1>
 
     <p class="hero-copy">
       Explore a wide retail collection of silk and cotton sarees, men’s, women’s and kids’ clothing, dress materials and everyday essentials. Three generations of service, quality and trust.
     </p>
 
     <div class="hero-actions">
-      <a class="button" href="#collections">Explore Collections</a>
-      <a class="text-link" href="#legacy">Discover Our Story</a>
+
+      <a class="button" href="#collections">
+        Explore Collections
+      </a>
+
+      <a class="text-link" href="#legacy">
+        Discover Our Story
+      </a>
+
     </div>
+
   </div>
 
   <div class="heritage-note">
@@ -998,6 +1046,7 @@ section {padding:112px var(--pad)}
   </div>
 
   <div class="scroll-mark">Scroll to discover</div>
+
 </section>
 
 <!-- COLLECTIONS -->
@@ -1005,53 +1054,91 @@ section {padding:112px var(--pad)}
 <section class="collections" id="collections">
 
   <div class="section-head reveal">
+
     <div>
       <p class="section-kicker">Made for every generation</p>
-      <h2 class="section-title">Find your <em>style.</em></h2>
+
+      <h2 class="section-title">
+        Find your <em>style.</em>
+      </h2>
+
       <p class="section-intro">
         Explore a world of clothing for every age, occasion and everyday moment. From traditional favourites to modern retail essentials.
       </p>
     </div>
 
-    <a class="text-link" href="https://wa.me/919840331527?text=Hello%2C%20please%20share%20your%20available%20collections." target="_blank" rel="noopener">Ask about collections</a>
+    <a class="text-link"
+       href="https://wa.me/919840331527?text=Hello%2C%20please%20share%20your%20available%20collections."
+       target="_blank" rel="noopener">
+      Ask about collections
+    </a>
+
   </div>
 
   <div class="collection-grid">
 
-    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20men%27s%20clothing." target="_blank" rel="noopener">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=850&q=80" alt="Men's fashion collection">
+    <a class="collection reveal"
+       href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20men%27s%20clothing."
+       target="_blank" rel="noopener">
+
+      <img loading="lazy"
+           src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=850&q=80"
+           alt="Men's fashion collection">
+
       <div class="collection-label">
         <small>01 / Everyday to occasion</small>
         <h3>Men's Wear</h3>
         <span>Shirts · Trousers · More</span>
       </div>
+
     </a>
 
-    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20women%27s%20clothing%20and%20sarees." target="_blank" rel="noopener">
-      <img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=850&q=80" alt="Traditional women's clothing">
+    <a class="collection reveal"
+       href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20women%27s%20clothing%20and%20sarees."
+       target="_blank" rel="noopener">
+
+      <img loading="lazy"
+           src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=850&q=80"
+           alt="Traditional women's clothing">
+
       <div class="collection-label">
         <small>02 / Timeless elegance</small>
         <h3>Women's Wear</h3>
         <span>Sarees · Chudithars · More</span>
       </div>
+
     </a>
 
-    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20kids%27%20clothing." target="_blank" rel="noopener">
-      <img loading="lazy" src="images/kids-wear.webp" alt="Kids traditional clothing collection">
+    <a class="collection reveal"
+       href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20kids%27%20clothing."
+       target="_blank" rel="noopener">
+
+      <img loading="lazy"
+           src="images/kids-wear.webp"
+           alt="Kids traditional clothing collection">
+
       <div class="collection-label">
         <small>03 / Little moments</small>
         <h3>Kids' Wear</h3>
         <span>Comfort · Colour · Style</span>
       </div>
+
     </a>
 
-    <a class="collection reveal" href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20silk%20and%20cotton%20sarees." target="_blank" rel="noopener">
-      <img loading="lazy" src="images/silk-cotton.webp" alt="Folded silk and cotton sarees">
+    <a class="collection reveal"
+       href="https://wa.me/919840331527?text=Hello%2C%20I%20am%20interested%20in%20silk%20and%20cotton%20sarees."
+       target="_blank" rel="noopener">
+
+      <img loading="lazy"
+           src="images/silk-cotton.webp"
+           alt="Silk and cotton sarees">
+
       <div class="collection-label">
         <small>04 / Woven tradition</small>
         <h3>Silk & Cotton</h3>
         <span>Sarees · Dress Materials</span>
       </div>
+
     </a>
 
   </div>
@@ -1062,27 +1149,37 @@ section {padding:112px var(--pad)}
 
 </section>
 
-<!-- LEGACY -->
+<!-- LEGACY WITH OWNER PHOTO -->
 
 <section class="legacy" id="legacy">
 
   <div class="legacy-visual reveal">
-    <img loading="lazy" src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=1100&q=85" alt="Traditional fabrics">
+
+    <img
+      loading="lazy"
+      src="images/owner-photo.webp"
+      alt="Owner of Sithik Silk Centre"
+    >
+
     <div class="legacy-stamp">
       <div>
         <strong>50+</strong>
         Years of<br>trust & tradition
       </div>
     </div>
+
   </div>
 
   <div class="legacy-copy reveal">
+
     <p class="section-kicker">Our story · Our promise</p>
 
-    <h2 class="section-title">A family tradition, <em>stitched with trust.</em></h2>
+    <h2 class="section-title">
+      A family tradition, <em>stitched with trust.</em>
+    </h2>
 
     <p>
-      For over 50 years, SITHIK SILK CENTRE has been part of a family tradition that spans three generations. As a family-run retail store, we continue to serve customers with thoughtful selections, dependable choices and a warm welcome. Our focus is bringing a wide range of ready-to-wear clothing, sarees and dress materials together in one place.
+      For over 50 years, SITHIK SILK CENTRE has been part of a family tradition that spans three generations. As a family-run retail store, we continue to serve customers with thoughtful selections, dependable choices and a warm welcome.
     </p>
 
     <p>
@@ -1090,10 +1187,24 @@ section {padding:112px var(--pad)}
     </p>
 
     <div class="legacy-points">
-      <div><strong>50+</strong><span>Years of heritage</span></div>
-      <div><strong>3</strong><span>Generations</span></div>
-      <div><strong>All</strong><span>Family collections</span></div>
+
+      <div>
+        <strong>50+</strong>
+        <span>Years of heritage</span>
+      </div>
+
+      <div>
+        <strong>3</strong>
+        <span>Generations</span>
+      </div>
+
+      <div>
+        <strong>All</strong>
+        <span>Family collections</span>
+      </div>
+
     </div>
+
   </div>
 
 </section>
@@ -1103,9 +1214,14 @@ section {padding:112px var(--pad)}
 <section class="visit" id="visit">
 
   <div class="reveal">
-    <p class="section-kicker">We look forward to welcoming you</p>
 
-    <h2 class="section-title">Come by. <em>Explore.</em></h2>
+    <p class="section-kicker">
+      We look forward to welcoming you
+    </p>
+
+    <h2 class="section-title">
+      Come by. <em>Explore.</em>
+    </h2>
 
     <p class="section-intro">
       Visit SITHIK SILK CENTRE in Elavur and explore clothing for the whole family.
@@ -1117,7 +1233,11 @@ section {padding:112px var(--pad)}
         <span class="detail-mark">⌖</span>
         <div>
           <strong>Find our store</strong>
-          <p>F467+3FH, NH 16, Thurapallam,<br>Elavur, Tiruvallur District,<br>Tamil Nadu – 601201</p>
+          <p>
+            F467+3FH, NH 16, Thurapallam,<br>
+            Elavur, Tiruvallur District,<br>
+            Tamil Nadu – 601201
+          </p>
         </div>
       </div>
 
@@ -1146,15 +1266,29 @@ section {padding:112px var(--pad)}
       </div>
 
     </div>
+
   </div>
 
   <div class="map-panel reveal">
+
     <div class="map-inner">
+
       <div class="map-pin">⌖</div>
+
       <h3>Visit us in Elavur</h3>
-      <p>Find us on NH 16, Thurapallam, Elavur, Tiruvallur District, Tamil Nadu.</p>
-      <a class="outline-button" href="https://maps.app.goo.gl/Yd7oUxuT8R6pZkFc9" target="_blank" rel="noopener">Get directions</a>
+
+      <p>
+        Find us on NH 16, Thurapallam, Elavur, Tiruvallur District, Tamil Nadu.
+      </p>
+
+      <a class="outline-button"
+         href="https://maps.app.goo.gl/Yd7oUxuT8R6pZkFc9"
+         target="_blank" rel="noopener">
+        Get directions
+      </a>
+
     </div>
+
   </div>
 
 </section>
@@ -1162,6 +1296,7 @@ section {padding:112px var(--pad)}
 <!-- CLOSING -->
 
 <section class="closing">
+
   <p class="section-kicker">A tradition that continues</p>
 
   <h2 class="section-title">
@@ -1169,9 +1304,16 @@ section {padding:112px var(--pad)}
     <em>For every generation.</em>
   </h2>
 
-  <p>Have a question about our collections? Get in touch with us directly.</p>
+  <p>
+    Have a question about our collections? Get in touch with us directly.
+  </p>
 
-  <a class="button" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20know%20more." target="_blank" rel="noopener">Chat with us on WhatsApp</a>
+  <a class="button"
+     href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20would%20like%20to%20know%20more."
+     target="_blank" rel="noopener">
+    Chat with us on WhatsApp
+  </a>
+
 </section>
 
 </main>
@@ -1179,6 +1321,7 @@ section {padding:112px var(--pad)}
 <!-- FOOTER -->
 
 <footer class="footer">
+
   <div class="footer-brand">SITHIK SILK CENTRE</div>
 
   <div>
@@ -1190,15 +1333,23 @@ section {padding:112px var(--pad)}
     <a href="#legacy">Our Story</a>
     <a href="#visit">Location</a>
   </div>
+
 </footer>
 
 <!-- WHATSAPP FLOATING BUTTON -->
 
-<a class="whatsapp-float" href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20have%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with SITHIK SILK CENTRE on WhatsApp">
+<a class="whatsapp-float"
+   href="https://wa.me/919840331527?text=Hello%20Sithik%20Silk%20Centre%2C%20I%20have%20an%20enquiry."
+   target="_blank" rel="noopener"
+   aria-label="Chat with SITHIK SILK CENTRE on WhatsApp">
+
   <svg viewBox="0 0 32 32" aria-hidden="true">
     <path d="M16.04 3C8.9 3 3.1 8.78 3.1 15.9c0 2.28.6 4.5 1.74 6.45L3 29l6.82-1.79a12.95 12.95 0 0 0 6.21 1.58h.01c7.13 0 12.93-5.79 12.94-12.9A12.83 12.83 0 0 0 25.2 6.7 12.86 12.86 0 0 0 16.04 3zm0 23.6h-.01c-1.93 0-3.82-.52-5.47-1.5l-.39-.23-4.05 1.06 1.08-3.94-.25-.4a10.7 10.7 0 0 1-1.64-5.7c0-5.92 4.82-10.73 10.75-10.73 2.87 0 5.56 1.12 7.59 3.15a10.65 10.65 0 0 1 3.14 7.6c0 5.92-4.82 10.73-10.75 10.73zm5.9-8.04c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.22.32-.84 1.05-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.85-1.61-1.9-1.8-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.57.14-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.55-.73-.56h-.62c-.22 0-.57.08-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.1 1.32 3.31c.16.22 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.76.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37z"/>
   </svg>
+
 </a>
+
+<!-- JAVASCRIPT -->
 
 <script>
 const burger=document.getElementById('burger');
@@ -1207,6 +1358,7 @@ const menu=document.getElementById('mobileMenu');
 function closeMenu(){
   burger.classList.remove('active');
   menu.classList.remove('open');
+
   burger.setAttribute('aria-expanded','false');
   burger.setAttribute('aria-label','Open menu');
   menu.setAttribute('aria-hidden','true');
@@ -1214,8 +1366,10 @@ function closeMenu(){
 
 burger.addEventListener('click',()=>{
   const open=!menu.classList.contains('open');
+
   menu.classList.toggle('open',open);
   burger.classList.toggle('active',open);
+
   burger.setAttribute('aria-expanded',String(open));
   burger.setAttribute('aria-label',open?'Close menu':'Open menu');
   menu.setAttribute('aria-hidden',String(!open));
